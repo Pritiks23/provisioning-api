@@ -36,6 +36,8 @@
   <img src="https://github.com/user-attachments/assets/c6145e1e-c9a6-4676-b08f-a7287d2b630b" width="450">
   <img src="https://github.com/user-attachments/assets/28aece8e-f061-4578-8e3e-1fa9fd7d61a6" width="450">
 </p>
+# GPU Infrastructure Provisioning System
+
 I built a GPU infrastructure provisioning system to simulate managing GPU servers in a rack.
 
 The basic idea is that instead of manually logging into every GPU server and configuring it, I want a central application where someone can request a GPU server to be provisioned.
@@ -50,7 +52,7 @@ Next, I created a Python FastAPI application. This is the actual backend of my s
 
 Then I put Nginx in front of the API. Nginx acts as a reverse proxy. Instead of the user connecting directly to the FastAPI application on port 8000, the user connects to Nginx on port 80. Nginx receives the request and forwards it to FastAPI.
 
-This means your application doesn't have to be directly exposed to the outside world.
+This means your application doesn't have to be directly exposed to the outside world.  
 This becomes much more useful when you have multiple FastAPI instances: Nginx can distribute requests between them.
 
 So if I open the website and request /gpus, the request travels from my browser to Nginx, then from Nginx to FastAPI, then FastAPI queries PostgreSQL, and PostgreSQL returns the GPU information.
@@ -63,4 +65,4 @@ I also used curl to test the API directly from the command line. This is useful 
 
 At the end, I had a working flow:
 
-Browser → Nginx → FastAPI → PostgreSQL → GPU inventory.
+**Browser → Nginx → FastAPI → PostgreSQL → GPU inventory.**
