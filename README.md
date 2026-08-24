@@ -35,8 +35,7 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c6145e1e-c9a6-4676-b08f-a7287d2b630b" width="450">
   <img src="https://github.com/user-attachments/assets/28aece8e-f061-4578-8e3e-1fa9fd7d61a6" width="450">
-</p>
-# GPU Infrastructure Provisioning System
+</p> GPU Infrastructure Provisioning System 
 
 I built a GPU infrastructure provisioning system to simulate managing GPU servers in a rack.
 
