@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 import psycopg2
 import os
 
@@ -20,11 +21,8 @@ def get_db():
 
 
 @app.get("/")
-def health():
-    return {
-        "service": "GPU Rack Provisioner",
-        "status": "healthy"
-    }
+def dashboard():
+    return FileResponse("static/index.html")
 
 
 @app.get("/gpus")
