@@ -31,6 +31,11 @@
        └──────────┘   │ NVIDIA Driver│
                       │ CUDA         │
                       └──────────────┘
+
+<img width="1494" height="488" alt="image" src="https://github.com/user-attachments/assets/c6145e1e-c9a6-4676-b08f-a7287d2b630b" />
+<img width="2856" height="1788" alt="image" src="https://github.com/user-attachments/assets/28aece8e-f061-4578-8e3e-1fa9fd7d61a6" />
+
+                      
 I built a GPU infrastructure provisioning system to simulate managing GPU servers in a rack.
 
 The basic idea is that instead of manually logging into every GPU server and configuring it, I want a central application where someone can request a GPU server to be provisioned.
